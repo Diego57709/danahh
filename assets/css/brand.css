@@ -7,10 +7,17 @@
 }
 
 .text-brand { color: var(--c-brand) !important; }
+.text-brand-light { color: var(--c-brand-light) !important; }
 .bg-brand { background-color: var(--c-brand) !important; }
+.hover\:bg-brand-light:hover { background-color: var(--c-brand-light) !important; }
 .border-brand { border-color: var(--c-brand) !important; }
 
 .text-dark { color: var(--c-dark) !important; }
 .bg-dark { background-color: var(--c-dark) !important; }
 
 :focus-visible { outline: 2px solid var(--c-brand); outline-offset: 2px; }
+
+.focus\:ring-brand:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: var(--c-brand);
+}
