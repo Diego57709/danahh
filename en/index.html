@@ -12,7 +12,7 @@
   <link rel="canonical" href="https://danahh.eu/en/" />
 
   <!-- PWA / Iconos -->
-  <meta name="theme-color" content="#facc15" />
+  <meta name="theme-color" content="#00cfeb" />
   <link rel="manifest" href="/manifest.json" />
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icon-192.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png" />
@@ -47,13 +47,14 @@
 
   <!-- TailwindCSS (utilidad) -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/brand.css" />
 
   <!-- Fuente del sistema: rápida y accesible -->
   <style>
     html, body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial }
     /* Visibilidad del enlace “Saltar al contenido” al enfocar con teclado */
     .skip-link { position:absolute; left:-9999px }
-    .skip-link:focus { left:1rem; top:1rem; z-index:9999; background:#facc15; color:#000; padding:.5rem .75rem; border-radius:.5rem }
+    .skip-link:focus { left:1rem; top:1rem; z-index:9999; background:#00cfeb; color:#000; padding:.5rem .75rem; border-radius:.5rem }
       /* El wrapper de banderas mide 200% (dos banderas apiladas) */
   #flags{
     height: 200%;
@@ -81,7 +82,7 @@
   <header class="fixed top-0 inset-x-0 z-50 bg-black/60 backdrop-blur supports-[backdrop-filter]:bg-black/40" role="banner">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <!-- Logotipo + nombre (enlace a la home) -->
-      <a class="flex items-center gap-3 text-white font-extrabold focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded" href="/en/" aria-label="Home — DANA Helping Hands">
+      <a class="flex items-center gap-3 text-white font-extrabold focus:outline-none focus:ring-2 focus:ring-brand rounded" href="/en/" aria-label="Home — DANA Helping Hands">
         <img src="https://youth.europa.eu/modules/custom/eyp_esc/images/esc-logo-en.png"
              alt="DANA Helping Hands Logo / European Solidarity Corps" class="h-8 w-auto" width="128" height="32" loading="eager" decoding="async" />
         <span>DANA Helping Hands</span>
@@ -89,15 +90,15 @@
 
       <!-- Navegación principal -->
       <nav class="hidden md:flex items-center gap-6 text-sm text-slate-200" aria-label="Main navigation">
-        <a class="hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded" href="#about">What we do</a>
-        <a class="hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded" href="#que-es">About the project</a>
-        <a class="hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded" href="#proximamente">Coming soon</a>
-        <a class="hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded" href="#contact">Contact</a>
+        <a class="hover:text-white focus:outline-none focus:ring-2 focus:ring-brand rounded" href="#about">What we do</a>
+        <a class="hover:text-white focus:outline-none focus:ring-2 focus:ring-brand rounded" href="#que-es">About the project</a>
+        <a class="hover:text-white focus:outline-none focus:ring-2 focus:ring-brand rounded" href="#proximamente">Coming soon</a>
+        <a class="hover:text-white focus:outline-none focus:ring-2 focus:ring-brand rounded" href="#contact">Contact</a>
       </nav>
 
       <!-- CTA visible y accesible -->
       <div class="flex items-center gap-2">
-        <a class="inline-flex items-center rounded-full bg-yellow-400 text-black px-4 py-2 text-sm font-semibold hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-400"
+        <a class="inline-flex items-center rounded-full bg-brand text-black px-4 py-2 text-sm font-semibold hover:bg-brand-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand"
            href="#voluntariado" role="button" aria-label="Join as a volunteer">
           Join as a volunteer
         </a>
@@ -106,7 +107,7 @@
       <!-- Contenedor del botón de idioma -->
       <div class="relative flex items-center">
         <button id="lang-switcher"
-        class="relative w-14 h-8 overflow-hidden rounded-full border border-gray-300 shadow-sm bg-white focus:outline-none focus:ring-2 focus:ring-yellow-400">
+        class="relative w-14 h-8 overflow-hidden rounded-full border border-gray-300 shadow-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand">
         <div id="flags" class="absolute inset-0 w-full">
             <img src="/assets/img/flags/es.svg" alt="Español" class="block w-full object-cover">
             <img src="/assets/img/flags/gb.svg" alt="English" class="block w-full object-cover">
@@ -125,9 +126,9 @@
       
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 grid md:grid-cols-2 gap-8 items-center">
         <div class="text-white">
-          <p class="uppercase tracking-widest text-xs text-yellow-300/90">NGO • Direct action</p>
+          <p class="uppercase tracking-widest text-xs text-brand-light">NGO • Direct action</p>
           <h1 id="hero-title" class="mt-3 text-5xl sm:text-6xl font-extrabold leading-tight drop-shadow-[0_3px_6px_rgba(0,0,0,0.8)]">
-            DANA Helping <span class="text-yellow-300">Hands</span>
+            DANA Helping <span class="text-brand-light">Hands</span>
           </h1>
 
           <!-- Lema DANAHH -->
@@ -140,10 +141,10 @@
           </p>
           <div class="mt-6 flex flex-wrap gap-3">
             <a href="#voluntariado"
-              class="inline-flex items-center rounded-full bg-yellow-400 text-black px-6 py-3 font-semibold hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-400"
+              class="inline-flex items-center rounded-full bg-brand text-black px-6 py-3 font-semibold hover:bg-brand-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand"
               role="button">Join as a volunteer</a>
             <a href="#about"
-              class="inline-flex items-center rounded-full bg-white/10 text-white px-6 py-3 ring-1 ring-white/20 hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-400">Learn more</a>
+              class="inline-flex items-center rounded-full bg-white/10 text-white px-6 py-3 ring-1 ring-white/20 hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand">Learn more</a>
           </div>
         </div>
       </div>
@@ -181,8 +182,8 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-3 gap-10">
           <div class="lg:col-span-1">
-            <p class="text-sm font-semibold text-yellow-600">About us</p>
-            <h2 id="about-title" class="text-3xl sm:text-4xl font-extrabold">Who <span class="text-yellow-500">We Are</span></h2>
+            <p class="text-sm font-semibold text-brand">About us</p>
+            <h2 id="about-title" class="text-3xl sm:text-4xl font-extrabold">Who <span class="text-brand">We Are</span></h2>
             <p class="mt-3 text-slate-600">
               DANA Helping Hands is a network of <strong>young European volunteers</strong> working
               in Valencia and other territories, coordinating useful and close-to-community actions.
@@ -192,7 +193,7 @@
               focused on <strong>community development</strong>, <strong>environmental conservation</strong>, and
               <strong>social work</strong> through <em>non-formal education</em>.
             </p>
-            <a href="#voluntariado" class="mt-5 inline-flex items-center rounded-full bg-slate-900 text-white px-5 py-2.5 text-sm hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-400">
+            <a href="#voluntariado" class="mt-5 inline-flex items-center rounded-full bg-slate-900 text-white px-5 py-2.5 text-sm hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand">
               Join as a volunteer
             </a>
           </div>
@@ -200,27 +201,27 @@
           <!-- Tarjetas resumen -->
           <div class="lg:col-span-2 grid sm:grid-cols-2 gap-6">
             <article class="rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition duration-300">
-              <h3 class="text-2xl font-bold text-yellow-600">European volunteering network</h3>
+              <h3 class="text-2xl font-bold text-brand">European volunteering network</h3>
               <p class="mt-3 text-slate-700 text-sm">We are part of the <strong>European Youth Volunteering Network</strong>.</p>
             </article>
             <article class="rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition duration-300">
-              <h3 class="text-2xl font-bold text-yellow-600">Presence and offices</h3>
+              <h3 class="text-2xl font-bold text-brand">Presence and offices</h3>
               <p class="mt-3 text-slate-700 text-sm">Presence in <strong>7 EU countries</strong> and offices in <strong>Madrid</strong> and <strong>Valencian Community</strong>.</p>
             </article>
             <article class="rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition duration-300">
-              <h3 class="text-2xl font-bold text-yellow-600">Alliances and delegations</h3>
+              <h3 class="text-2xl font-bold text-brand">Alliances and delegations</h3>
               <p class="mt-3 text-slate-700 text-sm">Strong relations with <strong>local and international partners</strong> and delegations in Spain.</p>
             </article>
             <article class="rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition duration-300">
-              <h3 class="text-2xl font-bold text-yellow-600">Mixed team</h3>
+              <h3 class="text-2xl font-bold text-brand">Mixed team</h3>
               <p class="mt-3 text-slate-700 text-sm"><strong>Trained staff</strong>, experienced volunteers, and newcomers bringing fresh ideas.</p>
             </article>
             <article class="rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition duration-300">
-              <h3 class="text-2xl font-bold text-yellow-600">Territorial work</h3>
+              <h3 class="text-2xl font-bold text-brand">Territorial work</h3>
               <p class="mt-3 text-slate-700 text-sm">Developing <strong>specific dynamics per community</strong> and gaining experience in <strong>volunteer management</strong>.</p>
             </article>
             <article class="rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition duration-300">
-              <h3 class="text-2xl font-bold text-yellow-600">Our impact</h3>
+              <h3 class="text-2xl font-bold text-brand">Our impact</h3>
               <p class="mt-3 text-slate-700 text-sm"><strong>50+ projects</strong> per year and <strong>300+ volunteers</strong> from inside and outside the EU.</p>
             </article>
           </div>
@@ -233,9 +234,9 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-10 items-center">
           <div>
-            <p class="text-sm font-semibold text-yellow-600 uppercase">Learn more</p>
+            <p class="text-sm font-semibold text-brand uppercase">Learn more</p>
             <h2 id="quees-title" class="mt-2 text-4xl sm:text-5xl font-extrabold text-slate-900">
-              What is <span class="text-yellow-500">DANA Helping Hands</span>
+              What is <span class="text-brand">DANA Helping Hands</span>
             </h2>
             <p class="mt-6 text-slate-700 leading-relaxed">
               An <strong>ambitious project</strong>, funded by the <strong>European Union</strong>,
@@ -294,9 +295,9 @@
       <nav aria-label="Footer links">
         <h2 class="font-semibold text-white">Links</h2>
         <ul class="mt-3 space-y-2 text-sm">
-          <li><a class="hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded" href="#about">What we do</a></li>
-          <li><a class="hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded" href="#que-es">About the project</a></li>
-          <li><a class="hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded" href="#proximamente">Coming soon</a></li>
+          <li><a class="hover:text-white focus:outline-none focus:ring-2 focus:ring-brand rounded" href="#about">What we do</a></li>
+          <li><a class="hover:text-white focus:outline-none focus:ring-2 focus:ring-brand rounded" href="#que-es">About the project</a></li>
+          <li><a class="hover:text-white focus:outline-none focus:ring-2 focus:ring-brand rounded" href="#proximamente">Coming soon</a></li>
         </ul>
       </nav>
     </div>
