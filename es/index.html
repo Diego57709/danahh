@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <!-- Metadatos básicos: idioma, codificación y viewport responsivo -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO: título + descripción + keywords -->
+  <title>DANA Helping Hands — Voluntariado europeo en acción</title>
+  <meta name="description" content="DANA Helping Hands coordina voluntariado joven para apoyar a las comunidades afectadas por la DANA en Valencia: ayuda directa, apoyo psicosocial, educación, medioambiente y recuperación económica." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://danahh.eu/" />
+
+  <!-- PWA / Iconos -->
+  <meta name="theme-color" content="#facc15" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icon-192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16.png" />
+  <link rel="author" href="/humans.txt" />
+
+  <!-- Fuente Google Fonts para destacar el lema -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+
+  <!-- Open Graph / Social -->
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DANA Helping Hands" />
+  <meta property="og:title" content="DANA Helping Hands — Voluntariado europeo en acción" />
+  <meta property="og:description" content="Voluntariado joven coordinado para la respuesta y recuperación tras la DANA en Valencia." />
+  <meta property="og:url" content="https://danahh.eu/" />
+  <meta property="og:image" content="https://danahh.eu/assets/img/og-image.jpg" />
+  <meta property="og:image:alt" content="Voluntariado de DANA Helping Hands en acción" />
+
+  <!-- Seguridad: evita contenido mixto -->
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+  <!-- Performance: conecta temprano y precarga la imagen principal (mejora LCP) -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+  <link rel="dns-prefetch" href="//img2.rtve.es">
+  <link rel="dns-prefetch" href="//youth.europa.eu">
+  <link rel="dns-prefetch" href="//climatica.coop">
+  <link rel="preload" as="image"
+        href="https://img2.rtve.es/imagenes/desesperacion-cabreo-tras-dana-deja-mas-200-muertos-valencia/01730471303037.jpg"
+        imagesrcset="https://img2.rtve.es/imagenes/desesperacion-cabreo-tras-dana-deja-mas-200-muertos-valencia/01730471303037.jpg 1920w"
+        imagesizes="100vw">
+
+  <!-- TailwindCSS (utilidad) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fuente del sistema: rápida y accesible -->
+  <style>
+    html, body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial }
+    /* Visibilidad del enlace “Saltar al contenido” al enfocar con teclado */
+    .skip-link { position:absolute; left:-9999px }
+    .skip-link:focus { left:1rem; top:1rem; z-index:9999; background:#facc15; color:#000; padding:.5rem .75rem; border-radius:.5rem }
+      /* El wrapper de banderas mide 200% (dos banderas apiladas) */
+  #flags{
+    height: 200%;
+    transition: transform .35s cubic-bezier(.22,.61,.36,1);
+    will-change: transform;
+  }
+  /* Cada bandera ocupa el 50% del wrapper (o sea, una altura de botón) */
+  #flags img{
+    height: 50%;
+  }
+  /* Fuente personalizada solo para el lema */
+.font-lema {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+}
+
+
+  </style>
+</head>
+<script src="../assets/js/language.js"></script>
+
+<body class="bg-white text-slate-900">
+  <!-- Accesibilidad: permite saltar el menú con teclado -->
+  <a href="#main" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- Encabezado global -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-black/60 backdrop-blur supports-[backdrop-filter]:bg-black/40" role="banner">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Logotipo + nombre (enlace a la home) -->
+      <a class="flex items-center gap-3 text-white font-extrabold focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded" href="/" aria-label="Inicio — DANA Helping Hands">
+        <img src="https://youth.europa.eu/modules/custom/eyp_esc/images/esc-logo-en.png"
+             alt="Logotipo DANA Helping Hands / European Solidarity Corps" class="h-8 w-auto" width="128" height="32" loading="eager" decoding="async" />
+        <span>DANA Helping Hands</span>
+      </a>
+
+      <!-- Navegación principal -->
+      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-200" aria-label="Navegación principal">
+        <a class="hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded" href="#about">Qué hacemos</a>
+        <a class="hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded" href="#que-es">Qué es el proyecto</a>
+        <a class="hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded" href="#proximamente">Próximamente</a>
+        <a class="hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded" href="#contact">Contacto</a>
+      </nav>
+
+      <!-- CTA visible y accesible -->
+      <div class="flex items-center gap-2">
+        <a class="inline-flex items-center rounded-full bg-yellow-400 text-black px-4 py-2 text-sm font-semibold hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-400"
+           href="#voluntariado" role="button" aria-label="Unirse como voluntariado">
+          Únete como voluntari@
+        </a>
+      </div>
+
+      <!-- Contenedor del botón de idioma -->
+      <div class="relative flex items-center">
+        <button id="lang-switcher"
+          class="relative w-14 h-8 overflow-hidden rounded-full border border-gray-300 shadow-sm bg-white focus:outline-none focus:ring-2 focus:ring-yellow-400">
+          <div id="flags" class="absolute inset-0 w-full">
+            <img src="/assets/img/flags/es.svg" alt="Español" class="block w-full object-cover">
+            <img src="/assets/img/flags/gb.svg" alt="English" class="block w-full object-cover">
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido principal de la página -->
+  <main id="main" tabindex="-1">
+    <!-- Hero -->
+    <section class="relative min-h-[72vh] grid place-items-center" aria-labelledby="hero-title">
+      <!-- Imagen de fondo -->
+      <!-- <img class="absolute inset-0 -z-20 h-full w-full object-cover"
+          src="https://img2.rtve.es/imagenes/desesperacion-cabreo-tras-dana-deja-mas-200-muertos-valencia/01730471303037.jpg"
+          alt="" role="presentation" /> -->
+      <div class="absolute inset-0 -z-20 bg-gray-300"></div>
+      <div class="absolute inset-0 -z-10 bg-gradient-to-b from-black/70 via-black/40 to-black/20" aria-hidden="true"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 grid md:grid-cols-2 gap-8 items-center">
+        <div class="text-white">
+          <p class="uppercase tracking-widest text-xs text-yellow-300/90">ONG • Acción directa</p>
+
+          <h1 id="hero-title" class="mt-3 text-5xl sm:text-6xl font-extrabold leading-tight drop-shadow-[0_3px_6px_rgba(0,0,0,0.8)]">
+            DANA Helping <span class="text-yellow-300">Hands</span>
+          </h1>
+
+          <!-- Lema DANAHH -->
+          <p class="mt-2 text-xl sm:text-2xl font-lema text-white drop-shadow-[0_3px_6px_rgba(0,0,0,0.9)]">
+            Aquí todos somos imprescindibles
+          </p>
+
+          <p class="mt-4 text-slate-100 text-lg max-w-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]">
+            Coordinamos voluntariado joven para apoyar a las personas y comunidades afectadas por la DANA en Valencia.
+            Actuamos en ayuda directa, apoyo psicosocial, educación, medioambiente y recuperación económica.
+          </p>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#voluntariado"
+              class="inline-flex items-center rounded-full bg-yellow-400 text-black px-6 py-3 font-semibold hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-400"
+              role="button">Únete como voluntari@</a>
+            <a href="#about"
+              class="inline-flex items-center rounded-full bg-white/10 text-white px-6 py-3 ring-1 ring-white/20 hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-400">Descubre más</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Logos de entidades colaboradoras -->
+    <section class="py-8 bg-white" aria-labelledby="logos-title">
+      <h2 id="logos-title" class="sr-only">Entidades colaboradoras</h2>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 opacity-90">
+        <ul class="flex flex-wrap items-center justify-center gap-10" role="list">
+          <li class="flex items-center justify-center">
+            <img src="https://altea.es/wp-content/uploads/2022/01/LOGO_AYTO_ALTEA-300x189-1.jpg"
+                 alt="Ayuntamiento de Altea"
+                 class="max-h-16 w-auto object-contain transition-transform duration-300 hover:scale-105"
+                 loading="lazy" decoding="async" width="180" height="100" />
+          </li>
+          <li class="flex items-center justify-center">
+            <img src="https://deamicitia.org/wp-content/uploads/2020/11/DA_full_logo2018.jpg"
+                 alt="De Amicitia"
+                 class="max-h-16 w-auto object-contain transition-transform duration-300 hover:scale-105"
+                 loading="lazy" decoding="async" width="200" height="80" />
+          </li>
+          <li class="flex items-center justify-center">
+            <img src="https://youth.europa.eu/modules/custom/eyp_esc/images/esc-logo-en.png"
+                 alt="European Solidarity Corps"
+                 class="max-h-16 w-auto object-contain transition-transform duration-300 hover:scale-105"
+                 loading="lazy" decoding="async" width="220" height="80" />
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Quiénes somos -->
+    <section id="about" class="py-16 bg-slate-50" aria-labelledby="about-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-3 gap-10">
+          <div class="lg:col-span-1">
+            <p class="text-sm font-semibold text-yellow-600">Sobre nosotros</p>
+            <h2 id="about-title" class="text-3xl sm:text-4xl font-extrabold">Quiénes <span class="text-yellow-500">Somos</span></h2>
+            <p class="mt-3 text-slate-600">
+              DANA Helping Hands es una red de <strong>jóvenes voluntarios europeos</strong> que trabaja
+              en Valencia y otros territorios, coordinando acciones útiles y cercanas.
+              <br><br>
+              Somos una <strong>ONG registrada desde 1998</strong> y ofrecemos
+              <strong>voluntariados</strong> en proyectos locales e internacionales,
+              centrados en <strong>desarrollo comunitario</strong>, <strong>conservación del medio ambiente</strong> y
+              <strong>trabajo social</strong> mediante <em>educación no formal</em>.
+            </p>
+            <a href="#voluntariado" class="mt-5 inline-flex items-center rounded-full bg-slate-900 text-white px-5 py-2.5 text-sm hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-400">Únete como voluntari@</a>
+          </div>
+
+          <!-- Tarjetas resumen -->
+          <div class="lg:col-span-2 grid sm:grid-cols-2 gap-6">
+            <article class="rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+              <h3 class="text-2xl font-bold text-yellow-600">Red de voluntariado europeo</h3>
+              <p class="mt-3 text-slate-700 text-sm">Nos constituimos como <strong>Red de Jóvenes de Voluntariado Europeo</strong>.</p>
+            </article>
+            <article class="rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+              <h3 class="text-2xl font-bold text-yellow-600">Presencia y sedes</h3>
+              <p class="mt-3 text-slate-700 text-sm"><strong>7 países de la UE</strong> y oficinas en <strong>Madrid</strong> y <strong>Comunidad Valenciana</strong>.</p>
+            </article>
+            <article class="rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+              <h3 class="text-2xl font-bold text-yellow-600">Alianzas y delegaciones</h3>
+              <p class="mt-3 text-slate-700 text-sm">Relaciones con <strong>socios locales e internacionales</strong> y delegaciones en España.</p>
+            </article>
+            <article class="rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+              <h3 class="text-2xl font-bold text-yellow-600">Equipo mixto</h3>
+              <p class="mt-3 text-slate-700 text-sm"><strong>Personal capacitado</strong>, voluntariado con experiencia y nuevas incorporaciones con ideas frescas.</p>
+            </article>
+            <article class="rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+              <h3 class="text-2xl font-bold text-yellow-600">Trabajo territorial</h3>
+              <p class="mt-3 text-slate-700 text-sm">Dinámicas <strong>específicas por comunidad</strong> y experiencia en <strong>gestión de voluntariado</strong>.</p>
+            </article>
+            <article class="rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+              <h3 class="text-2xl font-bold text-yellow-600">Nuestro impacto</h3>
+              <p class="mt-3 text-slate-700 text-sm"><strong>50+ proyectos</strong> de voluntariado al año y <strong>300+ voluntarios</strong> de dentro y fuera de la UE.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Qué es -->
+    <section id="que-es" class="py-20 bg-white" aria-labelledby="quees-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <p class="text-sm font-semibold text-yellow-600 uppercase">Conócenos</p>
+            <h2 id="quees-title" class="mt-2 text-4xl sm:text-5xl font-extrabold text-slate-900">
+              Qué es <span class="text-yellow-500">DANA Helping Hands</span>
+            </h2>
+            <p class="mt-6 text-slate-700 leading-relaxed">
+              Un <strong>ambicioso proyecto</strong>, subvencionado con <strong>fondos de la Unión Europea</strong>,
+              para contribuir durante <strong>36 meses</strong> con las poblaciones de la
+              <strong>Comunidad Valenciana</strong> afectadas por la <strong>DANA del 29 de octubre de 2024</strong>.
+            </p>
+            <p class="mt-4 text-slate-700 leading-relaxed">
+              La propuesta de <strong>DANA HH</strong> es un <strong>Plan de Intervención</strong> mediante
+              <strong>19 proyectos de voluntariado</strong> para la recuperación de las zonas afectadas.
+              Buscamos <strong>fomentar la colaboración</strong> entre voluntarios, organizaciones y la comunidad local.
+            </p>
+            <p class="mt-4 text-slate-700 leading-relaxed">
+              En otras palabras, <strong>aunamos fuerzas</strong> para atender las necesidades más urgentes,
+              <strong>ayudar a las personas a recuperar su calidad de vida</strong> y generar
+              <strong>cambios sostenibles</strong> en el tejido social.
+            </p>
+            <p class="mt-4 text-slate-700 leading-relaxed">
+              Nuestra iniciativa contribuye a la <strong>recuperación material</strong>, al
+              <strong>fortalecimiento de las comunidades</strong> y a la
+              <strong>sensibilización</strong> sobre los efectos de los desastres naturales.
+              Gracias a la <strong>sinergia</strong> entre socios locales e internacionales,
+              buscamos <strong>restaurar la esperanza</strong>, mejorar la calidad de vida de los damnificados
+              y establecer un <strong>modelo replicable</strong> para futuras crisis climáticas.
+            </p>
+          </div>
+
+          <!-- Imagen -->
+          <figure class="relative">
+            <!--<img class="rounded-2xl shadow-lg ring-1 ring-slate-200"
+                src="https://climatica.coop/wp-content/uploads/2024/10/b54d9283f60774d57d12afc75ada38d8133d82afw.jpg"
+                alt="Voluntariado trabajando en limpieza tras la DANA en Valencia"
+                loading="lazy" decoding="async" width="1200" height="800" /> -->
+                <div class="w-full h-72 bg-gray-300 rounded-2xl flex items-center justify-center text-gray-600">Imagen del proyecto</div>
+                <figcaption class="sr-only">Acción de limpieza comunitaria posterior a las inundaciones</figcaption>
+                <div class="absolute -bottom-5 -right-5 bg-white text-black text-sm font-semibold px-4 py-2 rounded-full shadow" aria-hidden="true">
+              <img src="https://youth.europa.eu/modules/custom/eyp_esc/images/esc-logo-en.png"
+                alt="European Solidarity Corps" class="h-8 w-auto" width="128" height="32" loading="lazy" decoding="async" />
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer id="contact" class="bg-slate-900 text-slate-300" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center gap-3 text-white font-extrabold">
+          <img src="https://youth.europa.eu/modules/custom/eyp_esc/images/esc-logo-en.png" alt="DANA Helping Hands" class="h-8 w-auto" width="128" height="32" loading="lazy" decoding="async" />
+          <span>DANA Helping Hands</span>
+        </div>
+        <address class="not-italic mt-3 text-sm text-slate-400">
+          C/ Ejemplo 123, Valencia • <a href="tel:+34600000000" class="underline hover:no-underline">+34 600 000 000</a> •
+          <a href="mailto:contacto@danahelpinghands.org" class="underline hover:no-underline">contacto@danahelpinghands.org</a>
+        </address>
+      </div>
+      <nav aria-label="Enlaces de pie de página">
+        <h2 class="font-semibold text-white">Enlaces</h2>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded" href="#about">Qué hacemos</a></li>
+          <li><a class="hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded" href="#que-es">Qué es el proyecto</a></li>
+          <li><a class="hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded" href="#proximamente">Próximamente</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">
+      © 2025 DANA Helping Hands. Todos los derechos reservados.
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Redirigiendo...</title>
+  <meta http-equiv="refresh" content="0; URL=/es/index.html">
+  <script>
+    // Redirigir automáticamente según idioma del navegador
+    const userLang = navigator.language || navigator.userLanguage;
+    const lang = userLang.startsWith("en") ? "en" : "es";
+    window.location.replace(`/${lang}/index.html`);
+  </script>
+</head>
+<body>
+  Redirigiendo…
+</body>
+</html>

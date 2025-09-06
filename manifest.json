@@ -1,0 +1,21 @@
+{
+  "name": "DANA Helping Hands",
+  "short_name": "DANA HH",
+  "description": "Voluntariado europeo en acción para ayudar a comunidades afectadas por la DANA en Valencia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#facc15",
+  "icons": [
+    {
+      "src": "/assets/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

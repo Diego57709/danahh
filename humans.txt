@@ -1,0 +1,14 @@
+/* TEAM */
+Developer: Diego Chuhan Li
+Website: https://danahh.eu
+Contact: contacto@danahelpinghands.org
+
+/* THANKS */
+Hosting: Arsys
+Framework: TailwindCSS
+Icons: Heroicons
+
+/* SITE */
+Last update: 2025-08-27
+Standards: HTML5, CSS3, WAI-ARIA
+Language: Spanish
